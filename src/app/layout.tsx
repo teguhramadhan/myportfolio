@@ -32,6 +32,33 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   design and a passion for code, I bridge creativity and
                   functionality to craft intuitive, responsive interfaces.
                 </p>
+
+                {/* Social media untuk mobile (pindahkan ke sini) */}
+                <div className="lg:hidden flex justify-start gap-6 mb-8 text-2xl text-slate-400">
+                  <a
+                    href="https://github.com/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition"
+                  >
+                    <FaGithub />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/yourusername"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="mailto:youremail@example.com"
+                    className="hover:text-primary transition"
+                  >
+                    <FaEnvelope />
+                  </a>
+                </div>
+
                 <div className="hidden lg:block">
                   <SidebarNav />
                   <div className="hidden fixed bottom-12 lg:flex justify-start gap-6 mt-10 text-xl text-slate-400">
@@ -65,35 +92,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             {/* Main Content */}
             <main
               id="scroll-container"
-              className="w-full lg:w-3/5 space-y-20 h-screen overflow-y-auto scroll-smooth scroll-hide"
+              className="w-full lg:w-3/5 space-y-20 h-screen lg:overflow-y-auto scroll-smooth scroll-hide"
             >
               {children}
             </main>
-            {/* Mobile version social links (shown below content) */}
-            <div className="lg:hidden flex justify-center gap-6 mt-12 text-2xl text-slate-400">
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition"
-              >
-                <FaGithub />
-              </a>
-              <a
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href="mailto:youremail@example.com"
-                className="hover:text-primary transition"
-              >
-                <FaEnvelope />
-              </a>
-            </div>
           </div>
         </ScrollSpyProvider>
       </body>

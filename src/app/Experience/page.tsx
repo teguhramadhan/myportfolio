@@ -1,10 +1,10 @@
 export default function Experience() {
   return (
     <section id="experience" className="flex flex-col justify-center py-20">
-      <h2 className="text-4xl font-bold text-primary mb-12 px-8 uppercase">
+      <h2 className="text-4xl font-bold text-primary mb-12 px-2 uppercase">
         Experience
       </h2>
-      <div className="space-y-8">
+      <div className="space-y-4">
         {[
           {
             date: "Mar 2016 – Jun 2025",
@@ -58,7 +58,7 @@ export default function Experience() {
         ].map((item, i) => (
           <div
             key={i}
-            className="group transition duration-300 hover:bg-zinc-900 hover:shadow-md rounded-xl px-8 py-6"
+            className="group transition duration-300 hover:shadow-md rounded-xl px-2 py-6"
           >
             <div className="flex flex-col md:flex-row gap-4 md:gap-8">
               {/* Tanggal */}
@@ -70,11 +70,11 @@ export default function Experience() {
 
               {/* Konten utama */}
               <div className="flex-1">
-                <h3 className="text-2xl font-semibold mb-1 group-hover:text-primary transition">
+                <h3 className="text-2xl font-semibold mb-1 transition">
                   {item.title}
                 </h3>
                 <p className="text-gray-400 mb-2">{item.company}</p>
-                <p className="text-gray-300 leading-relaxed mb-3 text-justify lg:text-start">
+                <p className="text-gray-300 leading-relaxed text-justify text-sm md:text-md lg:text-lg lg:text-start mb-4">
                   {item.desc}
                 </p>
                 <div className="flex flex-wrap gap-2">

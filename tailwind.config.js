@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -7,10 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        helvetica: ["Helvetica", "Arial", "sans-serif"],
+      },
       colors: {
-        primary: "#00f0ff", // warna utama
-        background: "#0f0f0f", // kalau kamu pakai dark bg
-        light: "#e5e5e5", // warna teks default
+        primary: "#e76f51",
+        background: "#0f0f0f",
+        light: "#e5e5e5",
         muted: "#a3a3a3",
       },
     },

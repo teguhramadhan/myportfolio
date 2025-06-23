@@ -2,17 +2,18 @@
 
 import { useScrollSpy } from "./ScrollSpyContext";
 
+interface NavLink {
+  href: string;
+  label: string;
+}
+
 export default function SidebarNav() {
   const { activeId } = useScrollSpy();
 
-  // Debug log
-  console.log("Current activeId:", activeId);
-
-  const links = [
+  const links: NavLink[] = [
     { href: "#about", label: "About" },
     { href: "#experience", label: "Experience" },
     { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = (
@@ -25,22 +26,18 @@ export default function SidebarNav() {
     const scrollContainer = document.getElementById("scroll-container");
 
     if (targetElement && scrollContainer) {
-      // Calculate the position to scroll to
-      const containerRect = scrollContainer.getBoundingClientRect();
-      const targetRect = targetElement.getBoundingClientRect();
-      const scrollTop = scrollContainer.scrollTop;
-      const targetPosition =
-        scrollTop + (targetRect.top - containerRect.top) - 100; // 100px offset
+      const offset = 50;
+      const targetPosition = targetElement.offsetTop - offset;
 
       scrollContainer.scrollTo({
-        top: targetPosition,
+        top: Math.max(0, targetPosition),
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <nav className="mt-10 space-y-4 text-muted">
+    <nav className="mt-10 space-y-4">
       {links.map((link) => {
         const sectionId = link.href.replace("#", "");
         const isActive = activeId === sectionId;
@@ -50,18 +47,18 @@ export default function SidebarNav() {
             key={link.href}
             href={link.href}
             onClick={(e) => handleNavClick(e, link.href)}
-            className={`relative block w-fit transition-colors duration-300 cursor-pointer ${
+            className={`group relative pl-4 block w-fit transition-colors duration-300 cursor-pointer uppercase ${
               isActive
                 ? "text-primary font-bold"
-                : "text-muted-foreground hover:text-primary"
+                : "text-gray-400 hover:text-primary"
             }`}
           >
-            {link.label}
             <span
-              className={`absolute left-0 -bottom-1 h-[2px] bg-primary transition-all duration-300 ${
-                isActive ? "w-full opacity-100" : "w-0 opacity-0"
+              className={`absolute left-0 top-1/2 -translate-y-1/2 h-5 w-[2px] bg-primary transition-all duration-300 ${
+                isActive ? "opacity-100" : "opacity-0 group-hover:opacity-60"
               }`}
             />
+            {link.label}
           </a>
         );
       })}

@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className="font-helvetica bg-black text-white">
+      <body className="font-helvetica bg-black text-orange-50">
         <ScrollSpyProvider>
           <div className="flex flex-col lg:flex-row w-full max-w-[1200px] mx-auto px-6 sm:px-10 md:px-16 py-12 lg:py-20 gap-12">
             {/* Sidebar */}
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   functionality to craft intuitive, responsive interfaces.
                 </p>
 
-                {/* Social media untuk mobile (pindahkan ke sini) */}
+                {/* Social media untuk mobile */}
                 <div className="lg:hidden flex justify-start gap-6 mb-8 text-2xl text-slate-400">
                   <a
                     href="https://github.com/yourusername"
@@ -58,10 +58,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     <FaEnvelope />
                   </a>
                 </div>
-
+                {/* Social media untuk desktop */}
                 <div className="hidden lg:block">
                   <SidebarNav />
-                  <div className="hidden fixed bottom-12 lg:flex justify-start gap-6 mt-10 text-xl text-slate-400">
+                  <div className="hidden fixed bottom-32 lg:flex justify-start gap-6 mt-10 text-xl text-slate-400">
                     <a
                       href="https://github.com/yourusername"
                       target="_blank"

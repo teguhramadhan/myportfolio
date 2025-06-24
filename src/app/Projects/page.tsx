@@ -3,7 +3,10 @@ import { FaLongArrowAltRight } from "react-icons/fa"; // icon arrow
 
 export default function Projects() {
   return (
-    <section id="projects" className="flex flex-col justify-center py-20">
+    <section
+      id="projects"
+      className="flex flex-col justify-center py-4 md:py-12 lg:py-20 text-orange-50"
+    >
       <h2 className="text-4xl font-bold text-primary mb-12 uppercase px-8">
         Projects
       </h2>

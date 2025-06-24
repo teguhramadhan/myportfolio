@@ -1,10 +1,13 @@
 export default function Experience() {
   return (
-    <section id="experience" className="flex flex-col justify-center py-20">
+    <section
+      id="experience"
+      className="flex flex-col justify-center py-4 md:py-12 lg:py-20"
+    >
       <h2 className="text-4xl font-bold text-primary mb-12 px-2 uppercase">
         Experience
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-4 text-orange-50">
         {[
           {
             date: "Mar 2016 – Jun 2025",
@@ -74,7 +77,7 @@ export default function Experience() {
                   {item.title}
                 </h3>
                 <p className="text-gray-400 mb-2">{item.company}</p>
-                <p className="text-gray-300 leading-relaxed text-justify text-sm md:text-md lg:text-lg lg:text-start mb-4">
+                <p className="leading-relaxed text-justify text-sm md:text-md lg:text-lg lg:text-start mb-4">
                   {item.desc}
                 </p>
                 <div className="flex flex-wrap gap-2">

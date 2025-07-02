@@ -6,7 +6,7 @@ export default function About() {
           About
         </h2>
         <p>
-          I'm a{" "}
+          I&apos;m a{" "}
           <span className="font-bold text-primary">
             UI/UX Designer and Frontend Developer
           </span>{" "}
@@ -20,24 +20,24 @@ export default function About() {
           My passion lies in bridging the gap between design and code. I love
           turning complex problems into elegant solutions through
           well-structured components, interactive prototypes, and responsive
-          layouts. Whether it's designing in Figma or building in React and
+          layouts. Whether it&apos;s designing in Figma or building in React and
           TailwindCSS, I enjoy the creative flow of bringing ideas to life with
           precision and care.
         </p>
 
         <p>
-          Over the past few years, I've worked on various projects ranging from
-          personal portfolios and company profiles to e-commerce websites and
-          dashboard systems. This experience has taught me the importance of
+          Over the past few years, I&apos;ve worked on various projects ranging
+          from personal portfolios and company profiles to e-commerce websites
+          and dashboard systems. This experience has taught me the importance of
           consistency, accessibility, and attention to micro-interactions that
           enhance the user experience.
         </p>
 
         <p>
-          I'm constantly exploring new design trends, improving my workflow, and
-          learning modern web technologies. Currently, I'm focusing on refining
-          my skills in motion design, Next.js, and building better design
-          systems to streamline development across projects.
+          I&apos;m constantly exploring new design trends, improving my
+          workflow, and learning modern web technologies. Currently, I&apos;m
+          focusing on refining my skills in motion design, Next.js, and building
+          better design systems to streamline development across projects.
         </p>
       </div>
     </section>

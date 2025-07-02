@@ -8,11 +8,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        helvetica: ["Helvetica", "Arial", "sans-serif"],
+        inter: ["var(--font-raleway)"],
+        qurova: ["Qurova", "sans-serif"],
       },
       colors: {
-        primary: "#e76f51",
-        background: "#0f0f0f",
+        primary: "#F09410",
+        background: "#1B2062",
         light: "#e5e5e5",
         muted: "#a3a3a3",
       },

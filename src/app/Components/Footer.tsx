@@ -21,8 +21,11 @@ export default function Footer() {
           </span>
         ))}
       </div>
-      <p className="mt-6 text-md text-slate-600">
-        © {new Date().getFullYear()} Teguh Ramadhan. All rights reserved.
+      <p className="mt-6 text-sm md:text-md lg:text-lg text-slate-600">
+        © {new Date().getFullYear()} Teguh Ramadhan.
+      </p>
+      <p className="text-xs md:text-sm lg:text-md mt-1 text-primary/60">
+        All rights reserved.
       </p>
     </footer>
   );

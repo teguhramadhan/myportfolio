@@ -51,21 +51,20 @@ export function ScrollSpyProvider({
     setActiveId(defaultActiveId || sections[0].id);
 
     const handleIntersection: IntersectionObserverCallback = (entries) => {
-      let mostVisibleEntry: IntersectionObserverEntry | null = null;
-      let highestRatio = 0;
+      const visibleEntries = entries.filter(
+        (entry) => entry.isIntersecting && entry.intersectionRatio >= threshold
+      );
 
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && entry.intersectionRatio > highestRatio) {
-          highestRatio = entry.intersectionRatio;
-          mostVisibleEntry = entry;
-        }
-      });
+      if (visibleEntries.length === 0) return;
 
-      if (mostVisibleEntry && highestRatio >= threshold) {
-        const target = mostVisibleEntry.target as HTMLElement;
-        if (target.id) {
-          setActiveId(target.id);
-        }
+      // Find the entry with the highest intersection ratio
+      const mostVisibleEntry = visibleEntries.reduce((prev, current) =>
+        current.intersectionRatio > prev.intersectionRatio ? current : prev
+      );
+
+      const target = mostVisibleEntry.target;
+      if (target instanceof HTMLElement && target.id) {
+        setActiveId(target.id);
       }
     };
 

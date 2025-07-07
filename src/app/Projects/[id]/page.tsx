@@ -6,8 +6,7 @@ import Footer from "@/app/Components/Footer";
 import SocialBar from "@/app/Components/SocialBar";
 import Image from "next/image";
 
-export const revalidate = 60;
-export const dynamicParams = true;
+export const dynamic = "force-dynamic";
 
 interface Project {
   id: number;
@@ -25,19 +24,9 @@ type ProjectDetailPageProps = {
   }>;
 };
 
-export async function generateStaticParams() {
-  const supabase = supabaseServer();
-  const { data } = await supabase.from("projects").select("id");
-
-  return (data ?? []).map((item) => ({
-    id: String(item.id),
-  }));
-}
-
 export default async function ProjectDetailPage({
   params,
 }: ProjectDetailPageProps) {
-  // Await the params Promise
   const { id } = await params;
 
   const supabase = supabaseServer();
@@ -53,11 +42,13 @@ export default async function ProjectDetailPage({
 
   let images: string[] = [];
 
-  try {
-    const parsed = JSON.parse(project.image_url || "");
-    images = Array.isArray(parsed) ? parsed : [project.image_url || ""];
-  } catch {
-    if (project.image_url) images = [project.image_url];
+  if (project.image_url) {
+    try {
+      const parsed = JSON.parse(project.image_url);
+      images = Array.isArray(parsed) ? parsed : [project.image_url];
+    } catch {
+      images = [project.image_url];
+    }
   }
 
   const techs =

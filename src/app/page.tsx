@@ -1,4 +1,5 @@
 import About from "./About/page";
+import TechStack from "./Components/techstack";
 import Experience from "./Experience/page";
 import Projects from "./Projects/page";
 import Footer from "./Components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
             className="w-full lg:w-3/5 space-y-20 h-screen lg:overflow-y-auto scroll-smooth scroll-hide"
           >
             <About />
+            <TechStack />
             <Experience />
             <Projects />
             <Footer />

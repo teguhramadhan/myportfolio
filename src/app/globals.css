@@ -18,6 +18,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.swiper-pagination {
+  position: static !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.swiper-pagination-bullet {
+  background: #3a424d !important;
+  opacity: 0.5 !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f09410 !important;
+  opacity: 1 !important;
+  width: 6px !important;
+  height: 6px !important;
+}
+
 .scroll-smooth {
   scroll-behavior: smooth;
 }

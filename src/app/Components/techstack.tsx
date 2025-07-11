@@ -28,7 +28,7 @@ export default function TechStack() {
       description: "A powerful UI library for creating interactive interfaces.",
     },
     {
-      name: "Tailwind CSS",
+      name: "Tailwind",
       icon: <SiTailwindcss className="text-4xl text-cyan-400" />,
       description: "A utility-first CSS framework for rapid styling.",
     },
@@ -104,14 +104,14 @@ export default function TechStack() {
         >
           {stacks.map((stack, index) => (
             <SwiperSlide key={index}>
-              <div className="flex flex-col items-center p-6 bg-gray-950/50 rounded-xl shadow hover:shadow-lg transition">
+              <div className="flex flex-col justify-center items-center p-6 bg-gray-950/50 rounded-xl shadow hover:shadow-lg transition">
                 {stack.icon}
                 <h3 className="mt-4 text-xl font-semibold text-gray-100">
                   {stack.name}
                 </h3>
-                <p className="mt-2 text-gray-400 text-center text-xs md:text-sm lg:text-md">
+                {/* <p className="mt-2 text-gray-400 text-center text-xs md:text-sm lg:text-md">
                   {stack.description}
-                </p>
+                </p> */}
               </div>
             </SwiperSlide>
           ))}

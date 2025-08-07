@@ -41,9 +41,13 @@ export default function Projects() {
       id="projects"
       className="flex flex-col justify-center py-4 md:py-12 lg:py-20 text-orange-50"
     >
-      <h2 className="text-4xl font-bold text-primary mb-12 uppercase px-2">
-        Projects
-      </h2>
+      <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-12 font-code ligature-on">
+        <h2 className="text-4xl font-bold text-primary uppercase">Projects</h2>
+        <h1 className="text-4xl font-bold uppercase bg-gradient-to-b from-white via-primary to-black bg-clip-text text-transparent">
+          {" "}
+          ::: 01
+        </h1>
+      </div>
 
       {isLoading ? (
         <p className="text-slate-400 text-sm px-2">Loading projects...</p>

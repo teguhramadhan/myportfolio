@@ -9,7 +9,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full mt-20 py-6 text-center text-md text-slate-500">
+    <footer className="w-full mt-20 py-6 text-center text-md text-slate-500 font-code ligature-on">
       <p className="mb-3">Built with:</p>
       <div className="flex flex-wrap justify-center gap-3">
         {techStack.map((tech, idx) => (

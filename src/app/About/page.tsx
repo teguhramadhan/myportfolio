@@ -2,9 +2,13 @@ export default function About() {
   return (
     <section id="about" className="flex flex-col justify-start py-2">
       <div className="space-y-4 text-sm md:text-md lg:text-lg text-orange-50 text-justify lg:text-justify px-2">
-        <h2 className="text-4xl font-bold text-primary mb-3 md:mb-6 lg:mb-12 uppercase">
-          About
-        </h2>
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-12">
+          <h2 className="text-4xl font-bold text-primary uppercase">About</h2>
+          <h1 className="text-4xl font-bold uppercase bg-gradient-to-b from-white via-primary to-black bg-clip-text text-transparent font-code ligature-on">
+            {" "}
+            ::: 01
+          </h1>
+        </div>
         <p>
           I&apos;m a{" "}
           <span className="font-bold text-primary">

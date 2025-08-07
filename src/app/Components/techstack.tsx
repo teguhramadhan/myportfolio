@@ -67,12 +67,20 @@ export default function TechStack() {
   return (
     <section id="tech-stack" className="py-16 px-4">
       <div className="max-w-6xl mx-auto text-start">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-          Tech Stack
-        </h2>
-        <p className="text-slate-500 mb-8">
-          Technologies & tools I use to build awesome digital products.
-        </p>
+        <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-12 font-code ligature-on">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary uppercase">
+              Tech Stack
+            </h2>
+            <p className="text-slate-500 mb-8">
+              Technologies & tools I use to build awesome digital products.
+            </p>
+          </div>
+          <h1 className="text-4xl font-bold uppercase bg-gradient-to-b from-white via-primary to-black bg-clip-text text-transparent">
+            {" "}
+            ::: 02
+          </h1>
+        </div>
 
         <Swiper
           modules={[Pagination]}

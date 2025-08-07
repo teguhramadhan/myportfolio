@@ -4,9 +4,15 @@ export default function Experience() {
       id="experience"
       className="flex flex-col justify-center py-4 md:py-12 lg:py-20"
     >
-      <h2 className="text-4xl font-bold text-primary mb-12 px-2 uppercase">
-        Experience
-      </h2>
+      <div className="flex justify-between items-center mb-4 md:mb-8 lg:mb-12 font-code ligature-on">
+        <h2 className="text-4xl font-bold text-primary uppercase">
+          Experience
+        </h2>
+        <h1 className="text-4xl font-bold uppercase bg-gradient-to-b from-white via-primary to-black bg-clip-text text-transparent">
+          {" "}
+          ::: 03
+        </h1>
+      </div>
       <div className="space-y-4 text-orange-50">
         {[
           {

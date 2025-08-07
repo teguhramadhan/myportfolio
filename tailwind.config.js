@@ -1,4 +1,3 @@
-// tailwind.config.js
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["var(--font-raleway)"],
-        qurova: ["Qurova", "sans-serif"],
+        code: ["Fira Code", "Cascadia Code", "monospace"],
       },
       colors: {
         primary: "#F09410",
